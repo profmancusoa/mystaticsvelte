@@ -13,7 +13,9 @@ const config = {
             precompress: false,
             strict: true
         }),
-		paths: { relative: false }
+		paths: {
+			base: process.argv.includes('dev') ? '' : '/mysveltekit'
+		}
 	}
 };
 
